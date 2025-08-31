@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Settings - Amazon Prime</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/webp" href="prime-logo.webp">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<style>
+		body {
+			background: #0f171e;
+			color: #fff;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: row;
+		}
+		.main-content {
+			flex: 1;
+		}
+		.side-navbar {
+			width: min(18vw, 8rem);
+			background: rgba(35, 47, 62, 0.7);
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 2.5rem;
+			transition: background 0.3s, width 0.3s;
+			order: 2;
+		}
+		.side-navbar:hover,
+		.side-navbar:focus-within {
+			width: min(28vw, 12rem);
+			background: rgba(35, 47, 62, 1);
+		}
+		.nav-link {
+			color: #fff;
+			font-size: 1.2rem;
+			margin-bottom: 24px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			border-radius: 8px;
+			transition: background 0.2s, color 0.2s;
+		}
+		.nav-link.active, .nav-link:focus, .nav-link:hover {
+			background: #232f3e;
+			color: #00a8e1;
+		}
+		.nav-icon {
+			font-size: 1.6rem;
+		}
+		.profile-pic {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: #673ab7;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 8px;
+		}
+		.profile-pic .bi-person-fill {
+			font-size: 2rem;
+			color: #fff;
+		}
+		.profile-name {
+			color: #fff;
+			font-size: 1rem;
+			margin-bottom: 32px;
+			text-align: center;
+		}
+		.settings-card {
+			background: rgba(35, 47, 62, 0.8);
+			border-radius: 8px;
+			padding: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		.settings-item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		.settings-item:last-child {
+			border-bottom: none;
+		}
+		.form-check-input {
+			background-color: #232f3e;
+			border-color: #00a8e1;
+		}
+		.form-check-input:checked {
+			background-color: #00a8e1;
+			border-color: #00a8e1;
+		}
+		.save-button {
+			background: #00a8e1;
+			border: none;
+			color: white;
+			padding: 0.75rem 2rem;
+			border-radius: 4px;
+			font-weight: 500;
+		}
+	</style>
+</head>
+<body>
+	<div class="main-content">
+		<div class="container-fluid p-4">
+			<h2 class="mb-4 text-center">Settings</h2>
+			
+			<div class="d-flex justify-content-center">
+				<div class="col-md-8">
+					<div class="settings-card">
+						<h5 class="mb-3">Account Settings</h5>
+						<div class="settings-item">
+							<div>
+								<h6>Profile Name</h6>
+								<p class="text-muted mb-0">Roy</p>
+							</div>
+							<button class="btn btn-outline-light btn-sm">Edit</button>
+						</div>
+						<div class="settings-item">
+							<div>
+								<h6>Email</h6>
+								<p class="text-muted mb-0">roy@example.com</p>
+							</div>
+							<button class="btn btn-outline-light btn-sm">Change</button>
+						</div>
+						<div class="settings-item">
+							<div>
+								<h6>Password</h6>
+								<p class="text-muted mb-0">Last changed 30 days ago</p>
+							</div>
+							<button class="btn btn-outline-light btn-sm">Update</button>
+						</div>
+					</div>
+
+					<div class="text-center mt-4">
+						<button class="save-button">Save Changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="side-navbar">
+		<div class="d-flex flex-column align-items-center mb-4">
+			<div class="profile-pic">
+				<i class="bi bi-person-fill"></i>
+			</div>
+			<div class="profile-name">Roy</div>
+		</div>
+        <a class="nav-link" href="menu.html"><i class="bi bi-house nav-icon"></i></a>
+        <a class="nav-link" href="search.html"><i class="bi bi-search nav-icon"></i></a>
+        <a class="nav-link" href="browse.html"><i class="bi bi-grid-3x3-gap-fill nav-icon"></i></a>
+        <a class="nav-link" href="watchlist.html"><i class="bi bi-bookmark nav-icon"></i></a>
+        <a class="nav-link active" href="settings.html"><i class="bi bi-gear nav-icon"></i></a>
+	</nav>
+</body>
+</html> 
